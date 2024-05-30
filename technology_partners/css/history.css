@@ -1,0 +1,282 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: face;
+  src: url('../../static/OpenSans_Condensed-Light.ttf');
+}
+
+body{
+  position: relative;
+  background-color: rgb(10, 10, 10);
+  font-family: face;
+}
+
+.displayer{
+  position: relative;
+  height: 740px;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.displayer .video-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.4) translate(0px,5px);
+  /* transform: scale(1.4) translate(0px,115px); */
+  z-index: 5;
+}
+
+.displayer .video-container video{
+  width: 100%;
+  height: 100%;
+}
+
+.displayer .text-container{
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  z-index: 10;
+}
+
+.displayer .text-container h3{
+  color: rgb(192, 192, 192);
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.displayer .text-container h1{
+  font-size: 50px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.displayer .text-container p{
+  width: 630px;
+  margin-top: 10px;
+  line-height: 23px;
+}
+
+.row{
+  margin-top: 140px;
+}
+
+.row h1{
+  font-size: 25px;
+  text-align: center;
+}
+
+.offices{
+  margin: 150px 0 0 10vw;
+  padding-left: 70px;
+  display: flex;
+  height: 700px;
+  gap: 200px;
+}
+
+.offices .col h1{
+  font-size: 40px;
+}
+
+.offices .col p{
+  width: 350px;
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+.offices .box-table{
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.offices .col .container{
+  position: relative;
+  background-color: rgb(29, 29, 29);
+  border: solid 1px rgb(82, 82, 82);
+}
+
+.offices .col .container input{
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 80px;
+  opacity: 0;
+}
+
+.offices .col .container #radio-emakina:checked ~ .emakina{
+  display: grid;
+}
+
+.offices .col .container #radio-emakina:checked + span{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.offices .col .container #radio-group:checked ~ .group{
+  display: grid;
+}
+
+.offices .col .container #radio-group:checked + span{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.offices .col .container span{
+  display: inline-block;
+  width: 220px;
+  height: 80px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  padding: 30px 0;
+  border: solid 1px rgb(82, 82, 82);
+  border-top: none;
+}
+
+.offices .col .container .box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  padding: 50px 0 40px 0;
+  margin-left: 50px;
+  grid-column-gap: 80px;
+  grid-row-gap: 20px;
+  display: none;
+}
+
+.offices .col .container .box li{
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+.offices .col .container .box li a{
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+}
+
+.offices .col .container .box li a:hover{
+  color: rgb(255, 255, 255);
+}
+
+.offices .col .container .box .child-box{
+  margin-top: 20px;
+  list-style: none;
+}
+
+.offices .col .container .box .child-box li{
+  height: 40px;
+  font-weight: 100;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  padding: 50px 200px;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  gap: 20px;
+}
+
+article .title{
+  font-size: 40px;
+}
+
+article p{
+  line-height: 30px;
+}
+
+.diapo{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.diapo .big{
+  width: 470px;
+}
+
+.diapo .big img{
+  width: 100%;
+}
+
+.diapo .little{
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  gap: 50px;
+}
+
+.diapo .little img{
+  width: 100%;
+}
+
+.bigmoments{
+  display: flex;
+  column-gap: 80px;
+  margin: 100px 0 100px 8vw;
+}
+
+.bigmoments .text{
+  min-width: 280px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bigmoments .text h1{
+  width: 80%;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+.bigmoments .text p{
+  line-height: 25px;
+}
+
+.bigmoments .wrapper{
+  height: 500px;
+  width: auto;
+  overflow: hidden;
+}
+
+.bigmoments .wrapper .row{
+  margin: 0;
+  display: flex;
+  gap: 100px;
+  width: fit-content;
+}
+
+.bigmoments .wrapper .row .item{
+  width: 280px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bigmoments .wrapper .row .item img{
+  padding: 0 10px;
+  height: 150px;
+}
+
+.bigmoments .wrapper .row .item p{
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 100;
+}

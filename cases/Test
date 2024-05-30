@@ -1,0 +1,120 @@
+/* Responsive */
+.main_menu_responsive,.option_responsive{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.759);
+    z-index:10;
+    font-family: var(--font);
+}
+
+.main_menu_responsive .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_menu_responsive .logo img{
+    width: 50px;
+}
+
+.main_menu_responsive .scroll_menu{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50px;
+    height: 50px;
+    overflow: visible;
+    text-align: center;
+    z-index: 11;
+}
+
+.main_menu_responsive .scroll_menu input[type="checkbox"]{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50px;
+    height: 50px;
+    z-index: 44;
+    opacity: 0;  
+}
+
+.main_menu_responsive .scroll_menu ul{
+    position:fixed;
+    top: 50px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    display: none;
+    z-index: 55;
+    background-color: red;
+}
+
+.main_menu_responsive .scroll_menu ul li{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.main_menu_responsive .scroll_menu ul .search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_menu_responsive .scroll_menu ul .search input{
+    border: none;
+    background-color: transparent;
+}
+
+.main_menu_responsive .scroll_menu input[type="checkbox"]:checked ~ ul{
+    display: block;
+}
+
+.option_responsive{
+    top:50px;
+    background-color: rgb(49, 49, 49);
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.filter_responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    margin: auto;
+    margin-top: 10vh;
+    font-family: var(--font);
+    font-size: 2vh;
+}
+
+.filter_responsive .show{
+    padding: 3vh;
+    margin-top: 2vh;
+    border: 1.5px solid grey ;
+}
+
+.filter_responsive .load{
+    margin: auto;
+    display: flex;
+    padding-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    letter-spacing: 2.5px;
+}
+
+.filter_responsive p{
+    text-align: center;
+}
+
+.main_menu_responsive,.option_responsive, .sort_responsive, .filter_responsive{
+    display: none; 
+}

@@ -1,0 +1,391 @@
+
+@font-face {
+    font-family: face;
+    src: url("../../static/OpenSans_Condensed-Light.ttf");
+}
+
+@media (min-width:1024px) {
+    header {
+        width: 100%;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(0,0,0,.2);
+        color: white;
+        z-index: 1;
+    }
+        /* Pour  le titre */
+    header .title {
+        width: 23%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header .title h1 {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    .content-nav {
+        width: 72%;
+    }
+    header .icon {
+        display: none;
+    }
+    
+        /* Pour les navigation */
+    .main-nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav {
+        width: 60%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-list {
+        width: 100%;
+        padding: 0 60px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;   
+        flex-direction: row;
+    }
+    .nav-list-item {
+        height: 75px;
+        width: 100%;
+        padding: 0;
+        padding-right: 15px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .nav-list-item:hover {
+        cursor: pointer;
+    }
+
+    .navigator-a img {
+        display: none;
+    }
+
+    .nav-list-item::before {
+        content: "";
+        position: absolute;
+        left: calc(50%-6px);
+        bottom: 15px;
+        background: white;
+        height: 3px;
+        width: 12px;
+        z-index: 1;
+        opacity: 0;
+    }
+    .nav-list-item:hover::before {
+        opacity: 1;
+    }
+    .nav-list-item a {
+        text-decoration: none;
+        color: white;
+    }
+    .nav-list-item-active::before {
+        opacity: 1;
+    }
+    
+    .nav-list-item-choix {
+        position: absolute;
+        width: 101vw;
+        top: 100%;
+        height: 0;
+        transition: all 0.3s ease;
+        z-index: 10;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.596);
+        list-style: none;
+        text-align: left;
+    }
+    .nav-list-item-choix li {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: rgb(143, 143, 143);
+        padding: 5px;
+        /* text-wrap: wrap; */
+    }
+    .nav-list-item-choix li:hover {
+        color: white;
+        font-weight: 500;
+    }
+    .nav-list-company {
+        left: -28vw;
+        padding-left: 28vw;
+    }
+    .nav-list-item:hover .nav-list-company {
+        height: 80px;
+    }
+    .nav-list-service {
+        left: -38vw;
+        padding-left: 38vw;
+    }
+    .nav-list-item:hover .nav-list-service {
+        height: 105px;
+    }
+    .nav-list-work {
+        left: -48vw;
+        padding-left: 48vw;
+    }
+    .nav-list-item:hover .nav-list-work {
+        height: 105px;
+    }
+    .nav-list-updates {
+        left: -58vw;
+        padding-left: 58vw;
+    }
+    .nav-list-item:hover .nav-list-updates {
+        height: 105px;
+    }
+    .nav-list-career {
+        left: -68vw;
+        padding-left: 68vw;
+    }
+    .nav-list-item:hover .nav-list-career {
+        height: 60px;
+    }
+    
+        /* Pour les recherche */
+    .nav-left {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .search {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .btn-search {
+        background-color: transparent;
+        height: 30px;
+        width: 30px;
+    }
+    .search-form {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-form input {
+        border: none;
+        height: 30px;
+        width: 0;
+        transition: all 0.4s ease;
+        background-color: transparent;
+        color: white;
+    }
+    .search-form input:focus {
+        outline: none;
+        border-color: transparent;
+    }
+    .search-form input::placeholder {
+        color: white;
+    }
+    .search-form:hover input {
+       width: 120px;
+    }
+    .global {
+        padding: 0;
+        margin: 0;
+        margin-left: 10px;
+        color: white;
+    }
+}
+
+@media (max-width:1024px) {
+    header {
+        width: 100%;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(0,0,0,.2);
+        color: white;
+        z-index: 1;
+    }
+        /* Pour  le titre */
+    header .title {
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header .title h1 {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 18px;
+    }
+    
+    header .icon {
+        display: flex;
+    }
+
+        /* Pour les navigation */
+    .content-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        z-index: 10;
+    }
+    .content-nav:hover .main-nav {
+        display: block;
+        height: 100%;
+        transition: all 5s ease;
+    }
+    header .main-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+    }
+    header nav {
+        width: 60%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: gray;
+        width: 100%;    
+        color: white;
+    }
+    .nav-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 5px 0px;
+        list-style: none;
+    }
+
+    .navigator-a{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-list a {
+        text-decoration: none;
+        text-align: center;
+        font-size: 23px;
+        color: white;
+        padding: 10px 50px;
+    }
+    .nav-list a:hover {
+        cursor: pointer;
+    }
+    
+    .nav-list-item {
+        height: 75px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: all 0.4s ease;
+    }
+    .navigator-list {
+        width: 100%;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav-list-item:hover {
+        cursor: pointer;
+        background-color: rgba(80, 80, 80, 0.548);
+    }
+    .nav-list-item:hover .nav-list-item-choix {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding-left: 50px;
+    }
+    .nav-list-item .icon_up {
+        display: none;
+    }
+    .nav-list-item .icon_down {
+        display: block;
+    }
+    .nav-list-item:hover .icon_up {
+        display: block;
+    }
+    .nav-list-item:hover .icon_down {
+        display: none;
+    }
+
+        /* Pour chaque navigation  */
+    .nav-list-company-li:hover {
+        height: 130px;
+    }
+    .nav-list-service-li:hover {
+        height: 230px;
+    }
+    .nav-list-work-li:hover {
+        height: 150px;
+    }
+    .nav-list-updates-li:hover {
+        height: 150px;
+    }
+    .nav-list-career-li:hover {
+        height: 100px;
+    }
+
+    .nav-list-item a {
+        text-decoration: none;
+        color: white;
+    }
+    .nav-list-item-active::before {
+        opacity: 1;
+    }
+
+    .nav-list-item-choix {
+        width: 100%;
+        display: none;
+        list-style: none;
+    }
+    .nav-list-item-choix li {
+        color: rgba(255, 255, 255, 0.685);
+        font-size: 15px;
+    }
+    .nav-list-item-choix li:hover {
+        color: white;
+        font-size: 17px;
+    }
+}
